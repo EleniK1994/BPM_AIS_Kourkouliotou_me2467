@@ -178,7 +178,8 @@ def pupil_update(pupil):
     print("6-id number")
     print(15*"=")
     choice_to_update = input("Pick something to update (1-6): ")
-    if choice_to_update.strip().isdigit():
+    
+    if int(choice_to_update).strip().isdigit():
         choice_to_update = int(choice_to_update)
     else:
         print("Wrong input!")

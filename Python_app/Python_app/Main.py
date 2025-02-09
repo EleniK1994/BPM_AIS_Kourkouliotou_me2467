@@ -33,7 +33,8 @@ def main():
         print("7 - Update Teacher")
         print("8 - Delete Teacher")
         print("9 - Exit")
-        choice = int(input("Pick one (1-2-3-4-5-6-7-8-9): "))
+        choice1 = input("Pick one (1-2-3-4-5-6-7-8-9): ")
+        choice = int(choice1)
         while choice != 1 and choice != 2 and choice != 3 and choice != 4 and choice != 5 and choice != 6 and choice != 7 and choice != 8 and choice != 9:
             print('Give a valid input!')
             print("\n==============")
@@ -75,8 +76,8 @@ def main():
                 continue
             
             if print_choice == 1:
-                mod_pupils.pupil_id = int(input('Give the pupil id: '))
-                mod_pupils.pupil = mod_pupils.search_pupil_by_id(mod_pupils.pupil_id)
+                mod_pupils.pupil_id = input('Give the pupil id: ')
+                mod_pupils.pupil = mod_pupils.search_pupil_by_id(int(mod_pupils.pupil_id))
                 if mod_pupils.pupil is None:
                     print("This pupil does not exist (with this id).")
                 else:
