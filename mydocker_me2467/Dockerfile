@@ -1,4 +1,5 @@
-FROM python:3.10
+# light version of Python
+FROM python:3.10-slim
 
 # set a directory for the app
 WORKDIR /usr/src/app
